@@ -1,0 +1,29 @@
+# Welcome to commitji 👋
+[![npm version](https://badge.fury.io/js/commitji.svg)](https://badge.fury.io/js/commitji)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
+
+> A React utility library to match your props to the given media query
+
+### 🏠 [Homepage](https://github.com/jmaicaaan/commitji)
+
+## Usages
+
+- VSCode extension: ???
+- CLI: ???
+
+## Author
+
+👤 **JM Santos <johmichaelubas.santos@gmail.com.com**
+
+* Website: https://github.com/jmaicaaan
+* Github: [@jmaicaaan](https://github.com/jmaicaaan)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check [issues page](https://github.com/jmaicaaan/system-media/issues). 
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
