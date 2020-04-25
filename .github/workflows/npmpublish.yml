@@ -17,7 +17,7 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run bs
-      - run: npm compile-core
+      - run: npm run compile-core
       - run: npm test
 
   publish-npm:
