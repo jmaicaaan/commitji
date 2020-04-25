@@ -62,12 +62,12 @@ const settings = {
 Allow the consumer to add property in the settings where they can format it on their own. This will allow flexibility
 
 
-- Builder pattern on formatting
-- Move to Lerna
+- Builder pattern on formatting x
+- Move to Lerna x
   - core
-    - name: @commitji/core
+    - name: @commitji/core x
   - vscode-ext
-    - name: @commitji/vs-ext
-- Jira support
-- Error handling (skipped ones)
+    - name: @commitji/vs-ext x
+- Jira support x
+- Error handling (skipped ones) x
 - Publish

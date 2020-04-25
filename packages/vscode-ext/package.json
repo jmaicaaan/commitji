@@ -12,6 +12,9 @@
   "activationEvents": [
     "onCommand:commitji.commit"
   ],
+  "extensionDependencies": [
+    "vscode.git"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -109,5 +112,7 @@
     "typescript": "^3.8.3",
     "vscode-test": "^1.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@commitji/core": "^1.0.0"
+  }
 }

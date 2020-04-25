@@ -1,6 +1,6 @@
 import { App } from '../constants';
 
-type JiraWorkflowTransition = Record<'key' | 'label' | 'workflowTransitionname', string>;
+export type JiraWorkflowTransition = Record<'key' | 'label' | 'workflowTransitionName', string>;
 
 export type Settings = {
   workflow: App.BasicWorkflow | App.JiraWorkflow;

@@ -1,14 +1,12 @@
 import { QuickPickItem, window } from 'vscode';
 
-import { commitTypes } from '../../core/constants';
-import { CommitType } from '../../core/types';
+import { commitTypes, CommitType, Message } from '@commitji/core';
 
 type ShowCommitTypePickerResult = CommitType;
 
-// TODO - curried
 const findCommitTypeByName = (name: string) => (commitType: CommitType) => commitType.name === name;
 
-export const showCommitTypePicker = async (): Promise<ShowCommitTypePickerResult | undefined> => {
+export const showCommitTypePicker = async (): Promise<ShowCommitTypePickerResult> => {
   const commitTypeToQuickPickDisplay = (commitType: CommitType): QuickPickItem => ({
     label: [commitType.emoji.unicode, commitType.name, '-', commitType.description].join(' '),
   });
@@ -21,13 +19,18 @@ export const showCommitTypePicker = async (): Promise<ShowCommitTypePickerResult
   });
 
   if (!result) {
-    return;
+    throw new Error(Message.Error.MissingCommitType);
   }
 
+  // Extraction
   const [commitTypeWithEmojiUnicode] = result.label.split('-');
   const [, commitTypeName] = commitTypeWithEmojiUnicode.split(' ');
   const commitTypeFromTheResult = findCommitTypeByName(commitTypeName);
   const commitTypeFromResult = commitTypes.find(commitTypeFromTheResult);
+
+  if (!commitTypeFromResult) {
+    throw new Error(Message.Error.MissingCommitType);
+  }
 
   return commitTypeFromResult;
 };

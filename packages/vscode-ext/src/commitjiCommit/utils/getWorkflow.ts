@@ -1,7 +1,6 @@
-import { Settings } from '../../core/types';
+import { App, Settings } from '@commitji/core';
 
 import { basicWorkflow, jiraWorkflow } from '../workflows';
-import { App } from '../../core/constants';
 
 type Workflow = {
   key: App.BasicWorkflow | App.JiraWorkflow;

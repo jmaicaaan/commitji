@@ -1,12 +1,6 @@
-import { formatter } from '../../core/formatter';
-import { basicCommitParser } from '../../core/parsers';
-import { Settings } from '../../core/types';
+import { formatter, basicCommitParser, Settings } from '@commitji/core';
 
-import {
-  showCommitTypePicker,
-  showCommitBodyInputBox,
-  writeCommitToTerminal,
-} from '../utils';
+import { showCommitTypePicker, showCommitBodyInputBox, writeCommitToTerminal } from '../utils';
 
 export const basicWorkflow = async (settings: Settings) => {
   const commitType = await showCommitTypePicker();
@@ -15,10 +9,6 @@ export const basicWorkflow = async (settings: Settings) => {
     format: settings.format,
   });
   const basicFormatter = formatter(parser);
-
-  if (!commitType || !commitMessage) {
-    return;
-  }
 
   const formattedCommitText = basicFormatter({
     commitType,

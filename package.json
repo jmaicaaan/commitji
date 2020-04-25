@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lerna": "lerna",
-    "watch-ext": "lerna run watch --scope=@commitji/vscode-ext"
+    "bs": "lerna bootstrap",
+    "compile-core": "lerna run compile --scope=@commitji/core",
+    "compile-ext": "lerna run compile --scope=@commitji/vscode-ext",
+    "watch-core": "lerna run watch --scope=@commitji/core",
+    "watch-ext": "lerna run watch --scope=@commitji/vscode-ext",
+    "publish-core": "lerna exec -- npm publish --scope=@commitji/core"
   },
   "repository": {
     "type": "git",

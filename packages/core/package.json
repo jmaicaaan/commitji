@@ -1,0 +1,25 @@
+{
+  "name": "@commitji/core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "out/index.js",
+  "types": "out/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf out",
+    "precompile": "npm run clean",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "prepublish": "npm run clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
+  }
+}
