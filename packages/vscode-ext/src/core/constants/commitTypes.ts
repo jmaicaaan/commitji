@@ -1,8 +1,4 @@
-export type CommitType = {
-  name: 'build' | 'ci' | 'docs' | 'feat' | 'fix' | 'perf' | 'refactor' | 'style' | 'test',
-  description: string,
-  emoji: Record<'unicode' | 'shortcode', string>,
-};
+import { CommitType } from '../types';
 
 export const commitTypes: CommitType[] = [
   {
@@ -11,7 +7,7 @@ export const commitTypes: CommitType[] = [
     emoji: {
       shortcode: ':package:',
       unicode: '📦',
-    }
+    },
   },
   {
     name: 'ci',
@@ -19,7 +15,7 @@ export const commitTypes: CommitType[] = [
     emoji: {
       shortcode: ':construction_worker:',
       unicode: '👷‍♂',
-    }
+    },
   },
   {
     name: 'docs',
@@ -27,7 +23,7 @@ export const commitTypes: CommitType[] = [
     emoji: {
       shortcode: ':books:',
       unicode: '📚',
-    }
+    },
   },
   {
     name: 'feat',
@@ -35,7 +31,7 @@ export const commitTypes: CommitType[] = [
     emoji: {
       shortcode: ':sparkles:',
       unicode: '✨',
-    }
+    },
   },
   {
     name: 'fix',
@@ -43,7 +39,7 @@ export const commitTypes: CommitType[] = [
     emoji: {
       shortcode: ':bug:',
       unicode: '🐛',
-    }
+    },
   },
   {
     name: 'perf',
@@ -51,7 +47,7 @@ export const commitTypes: CommitType[] = [
     emoji: {
       shortcode: ':zap:',
       unicode: '⚡️',
-    }
+    },
   },
   {
     name: 'refactor',
@@ -59,15 +55,16 @@ export const commitTypes: CommitType[] = [
     emoji: {
       shortcode: ':recycle:',
       unicode: '♻️',
-    }
+    },
   },
   {
     name: 'style',
-    description: 'Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)',
+    description:
+      'Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)',
     emoji: {
       shortcode: ':gem:',
       unicode: '💎',
-    }
+    },
   },
   {
     name: 'test',
@@ -75,6 +72,6 @@ export const commitTypes: CommitType[] = [
     emoji: {
       shortcode: ':rotating_light:',
       unicode: '🚨',
-    }
-  }
+    },
+  },
 ];

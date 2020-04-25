@@ -1,0 +1,113 @@
+{
+  "name": "@commitji/vscode-ext",
+  "displayName": "commitji",
+  "description": "Create conventional commits with gitmojis",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.42.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:commitji.commit"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "commitji.commit",
+        "title": "Git Commitji: Create Commit Message"
+      }
+    ],
+    "configuration": {
+      "title": "Commitji",
+      "properties": {
+        "commitji.workflow": {
+          "type": "string",
+          "default": "basic",
+          "description": "Set the workflow that you want to use",
+          "enum": [
+            "basic",
+            "jira"
+          ],
+          "scope": "application",
+          "enumDescriptions": [
+            "Use the basic workflow",
+            "Use the jira workflow that enables you to do smart commits"
+          ]
+        },
+        "commitji.format": {
+          "type": "string",
+          "default": "{{unicode}} - {{commitType}}: {{commitMessage}}",
+          "description": "Set the commit format you wanted to use",
+          "scope": "application"
+        },
+        "commitji.jira.allowIssueKeyPrompt": {
+          "type": "boolean",
+          "default": false,
+          "description": "Toggle to enable asking Jira Ticket when commiting",
+          "scope": "application"
+        },
+        "commitji.jira.allowWorkflowTransitionPrompt": {
+          "type": "boolean",
+          "default": false,
+          "description": "Toggle to enable asking Jira Transition Workflow when commiting",
+          "scope": "application"
+        },
+        "commitji.jira.workflowTransitions": {
+          "type": "array",
+          "description": "Set the workflow transitions that will be used when `jira.allowWorkflowTransitionPrompt` is enabled.",
+          "items": {
+            "type": "object",
+            "title": "Workflow Transition",
+            "description": "Workflow Transition Properties",
+            "properties": {
+              "key": {
+                "type": "string",
+                "description": "Unique identifier to the workflow transition name"
+              },
+              "label": {
+                "type": "string",
+                "description": "The display name that will be displayed on the end-user"
+              },
+              "workflowTransitionName": {
+                "type": "string",
+                "description": "The name of the workflow with the hashtag",
+                "examples": [
+                  "#open",
+                  "#in-progress",
+                  "#code-review",
+                  "#done"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "publisher": "test",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.44.0",
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "eslint": "^6.8.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "glob": "^7.1.6",
+    "mocha": "^7.1.1",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0"
+  },
+  "dependencies": {}
+}
