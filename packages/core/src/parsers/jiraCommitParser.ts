@@ -1,7 +1,5 @@
-import { JiraWorkflowTransition } from '@commitji/core';
-
 import { ParserFormatTemplate } from '../constants';
-import { CommitType } from '../types';
+import { CommitType, JiraWorkflowTransition } from '../types';
 import { FormatterBuilder } from './formatterBuilder';
 
 type JiraCommitParserConfig = {
