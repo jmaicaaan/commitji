@@ -11,7 +11,8 @@
     "compile-ext": "lerna run compile --scope=commitji-vs",
     "watch-core": "lerna run watch --scope=@commitji/core",
     "watch-ext": "lerna run watch --scope=commitji-vs",
-    "publish-core": "lerna exec --scope=@commitji/core -- npm publish"
+    "publish-core": "lerna exec --scope=@commitji/core -- npm publish",
+    "publish-ext": "lerna exec --scope=commitji-vs -- npm run vscode:publish"
   },
   "repository": {
     "type": "git",
