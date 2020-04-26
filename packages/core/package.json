@@ -11,7 +11,7 @@
     "compile": "tsc -p ./",
     "lint": "eslint src --ext ts",
     "watch": "tsc -watch -p ./",
-    "prepublish": "npm run clean && npm run compile"
+    "prepare": "npm run compile"
   },
   "files": [
     "out"
