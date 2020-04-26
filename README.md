@@ -2,14 +2,13 @@
 [![npm version](https://badge.fury.io/js/commitji.svg)](https://badge.fury.io/js/commitji)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
-> A React utility library to match your props to the given media query
+> Create conventional commits with gitmojis
 
 ### 🏠 [Homepage](https://github.com/jmaicaaan/commitji)
 
 ## Usages
 
-- VSCode extension: ???
-- CLI: ???
+- Check out this one for [VScode extension usage](https://github.com/jmaicaaan/commitji/tree/master/packages/vscode-ext)
 
 ## Author
 
