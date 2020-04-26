@@ -8,9 +8,9 @@
     "lerna": "lerna",
     "bs": "lerna bootstrap",
     "compile-core": "lerna run compile --scope=@commitji/core",
-    "compile-ext": "lerna run compile --scope=@commitji/vscode-ext",
+    "compile-ext": "lerna run compile --scope=commitji-vs",
     "watch-core": "lerna run watch --scope=@commitji/core",
-    "watch-ext": "lerna run watch --scope=@commitji/vscode-ext",
+    "watch-ext": "lerna run watch --scope=commitji-vs",
     "publish-core": "lerna exec -- npm publish --scope=@commitji/core"
   },
   "repository": {
