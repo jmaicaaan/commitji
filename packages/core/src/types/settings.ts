@@ -4,7 +4,7 @@ export type JiraWorkflowTransition = Record<'key' | 'label' | 'workflowTransitio
 
 export type Settings = {
   workflow: App.BasicWorkflow | App.JiraWorkflow;
-  format: string;
+  format?: string;
   jira: {
     allowIssueKeyPrompt: false;
     allowWorkflowTransitionPrompt: false;
