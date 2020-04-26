@@ -1,5 +1,4 @@
 # Welcome to @commitji/vscode-ext 👋
-[![npm version](https://badge.fury.io/js/commitji.svg)](https://badge.fury.io/js/commitji)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
 > Create conventional commits with gitmojis on VSCode
