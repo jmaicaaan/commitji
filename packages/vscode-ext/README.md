@@ -1,65 +1,66 @@
-# commitji README
+# Welcome to @commitji/vscode-ext 👋
+[![npm version](https://badge.fury.io/js/commitji.svg)](https://badge.fury.io/js/commitji)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
-This is the README for your extension "commitji". After writing up a brief description, we recommend including the following sections.
+> Create conventional commits with gitmojis on VSCode
 
-## Features
+### 🏠 [Homepage](https://github.com/jmaicaaan/commitji)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Usages
 
-For example if there is an image subfolder under your extension project workspace:
+### Creating a conventional commit
 
-\!\[feature X\]\(images/feature-x.png\)
+- Open the command pallete on VSCode (cmd + shift + p)
+- Type in `commitji commit` then press enter
+- Answer the following prompt questions to compose your commit message
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Configuring Commitji
 
-## Requirements
+- Workflow selection
+  - Commitji includes two workflow as of the moment (Basic Workflow and Jira Workflow). You can change this on the settings. 
+  - Basic Workflow will ask you what commit type and commit message you want to include.
+  - Jira Workflow will ask you commit type, Jira Issue Key/Number, Commit Message and Jira Workflow Transition (optional).
+    - If you wish to enable the Jira Workflow Transition, toggle the option `Allow Workflow Transition prompt` and you must provide an array of workflow transitions in the settings. 
+    ```
+    "commitji.jira.workflowTransitions": [
+        {
+            "key": "open",
+            "label": "Open",
+            "workflowTransitionName": "#open"
+        },
+        {
+            "key": "inProgress",
+            "label": "In Progress",
+            "workflowTransitionName": "#in-progress"
+        }
+    ]
+    ```
+    For more details about the `workflowTransitionName` check out this [Jira documentation](https://confluence.atlassian.com/bitbucket/use-smart-commits-298979931.html).
+- Commit Formatting
+  - By default, Commitji includes its preferred commit format
+    - Basic Workflow Commit Format: `{{unicode}} - {{commitType}}: {{commitMessage}}`
+    - Jira Workflow Commit Format: `{{unicode}} - {{commitType}}: {{issueKey}} {{commitMessage}} {{workflowTransitionName}}`
+  - If you wish to modify this, you can change the format on the settings as well. Here are the corresponding key bindings:
+    - Unicode: `{{unicode}}` - This one is for the emoji
+    - Commit Type: `{{commitType}}`
+    - Commit Message: `{{commitMessage}}`
+    - Jira
+      - Issue Key: `{{issueKey}}`
+      - Workflow Transition Name: `{{workflowTransitionName}}`
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Author
 
-## Extension Settings
+👤 **JM Santos <johmichaelubas.santos@gmail.com.com**
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+* Website: https://github.com/jmaicaaan
+* Github: [@jmaicaaan](https://github.com/jmaicaaan)
 
-For example:
+## 🤝 Contributing
 
-This extension contributes the following settings:
+Contributions, issues and feature requests are welcome!
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+Feel free to check [issues page](https://github.com/jmaicaaan/system-media/issues). 
 
-## Known Issues
+## Show your support
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Give a ⭐️ if this project helped you!
