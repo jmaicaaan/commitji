@@ -13,6 +13,9 @@
     "watch": "tsc -watch -p ./",
     "prepublish": "npm run clean"
   },
+  "files": [
+    "out"
+  ],
   "author": "",
   "license": "ISC",
   "publishConfig": {
