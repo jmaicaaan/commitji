@@ -6,6 +6,11 @@
   "engines": {
     "vscode": "^1.42.0"
   },
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmaicaaan/commitji.git"
+  },
   "categories": [
     "Other"
   ],
@@ -42,7 +47,9 @@
         },
         "commitji.format": {
           "type": "string",
-          "default": "{{unicode}} - {{commitType}}: {{commitMessage}}",
+          "examples": [
+            "{{unicode}} - {{commitType}}: {{commitMessage}}"
+          ],
           "description": "Set the commit format you wanted to use",
           "scope": "application"
         },
@@ -90,7 +97,7 @@
       }
     }
   },
-  "publisher": "test",
+  "publisher": "jmaicaaan",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
