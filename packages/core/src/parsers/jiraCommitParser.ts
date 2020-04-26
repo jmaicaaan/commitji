@@ -26,18 +26,17 @@ export const jiraCommitParser = ({
   commitMessage,
   workflowTransition,
 }: JiraCommitParserArgs): string => {
-  const pendingFormat = new FormatterBuilder(format)
+  const formatted = new FormatterBuilder(format)
     .create()
     .withUnicode(unicode)
     .withCommitType(name)
     .withJiraIssueKey(issueKey.toUpperCase())
-    .withCommitMessage(commitMessage);
+    .withCommitMessage(commitMessage)
+    .withJiraWorkflowTransition(
+      includeWorkflow && workflowTransition
+        ? workflowTransition.workflowTransitionName
+        : ''
+    ).build();
 
-  if (includeWorkflow && workflowTransition) {
-    return pendingFormat
-      .withJiraWorkflowTransition(workflowTransition.workflowTransitionName)
-      .build();
-  }
-
-  return pendingFormat.build();
+  return formatted;
 };
