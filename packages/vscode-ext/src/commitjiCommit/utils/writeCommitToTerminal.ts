@@ -8,6 +8,7 @@ import { clipboard } from './clipboard';
 export const writeCommitToTerminal = (commitText: string) => {
   const commitMessage = `git commit -m "${commitText}"`;
   const terminal = window.activeTerminal;
+  const autoCommitToTerminal = false;
 
   clipboard.copy(commitMessage);
 
@@ -17,5 +18,5 @@ export const writeCommitToTerminal = (commitText: string) => {
   }
 
   terminal.show();
-  terminal.sendText(commitMessage);
+  terminal.sendText(commitMessage, autoCommitToTerminal);
 };
