@@ -9,5 +9,5 @@ export const ParserFormatTemplateKey = {
 };
 export const ParserFormatTemplate = {
   BasicCommitParser: `${ParserFormatTemplateKey.Unicode} - ${ParserFormatTemplateKey.CommitType}: ${ParserFormatTemplateKey.CommitMessage}`,
-  JiraCommitParser: `${ParserFormatTemplateKey.Unicode} - ${ParserFormatTemplateKey.CommitType}: [${ParserFormatTemplateKey.Jira.IssueKey}] ${ParserFormatTemplateKey.CommitMessage}`,
+  JiraCommitParser: `${ParserFormatTemplateKey.Unicode} - ${ParserFormatTemplateKey.CommitType}: [${ParserFormatTemplateKey.Jira.IssueKey}] ${ParserFormatTemplateKey.CommitMessage} ${ParserFormatTemplateKey.Jira.WorkflowTransitionName}`,
 };
