@@ -27,7 +27,7 @@ export const showJiraWorkflowTransitionPicker = async (
   }
 
   // Extraction
-  const [, dirtyWorkflowTransitionName] = result.label.split(' ');
+  const [, dirtyWorkflowTransitionName] = result.label.split('(');
   const workflowTransitionName = dirtyWorkflowTransitionName.replace('(', '').replace(')', '')
   const workflowTransitionFromTheResult = findWorkflowTransitionByName(workflowTransitionName);
   const workflowTransitionFromResult = workflowTransitions.find(workflowTransitionFromTheResult);
