@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lerna": "lerna",
     "bs": "lerna bootstrap",
+    "version": "lerna version --conventional-commits",
     "compile-core": "lerna run compile --scope=@commitji/core",
     "compile-ext": "lerna run compile --scope=commitji-vs",
     "watch-core": "lerna run watch --scope=@commitji/core",
