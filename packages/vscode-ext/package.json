@@ -53,6 +53,57 @@
           "description": "Set the commit format you wanted to use",
           "scope": "application"
         },
+        "commitji.commitTypes": {
+          "type": "array",
+          "default": [],
+          "description": "Extend the current commit types based on your needs",
+          "items": {
+            "type": "object",
+            "title": "Extended Commit Types",
+            "description": "Commit Type Properties",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Commit Type name",
+                "examples": [
+                  "fix",
+                  "feat"
+                ]
+              },
+              "description": {
+                "type": "string",
+                "description": "The Commit Type description",
+                "examples": [
+                  "A bug fix",
+                  "A new feature"
+                ]
+              },
+              "emoji": {
+                "type": "object",
+                "title": "The emoji to be used on the Commit Type",
+                "description": "The name of the workflow with the hashtag",
+                "properties": {
+                  "unicode": {
+                    "type": "string",
+                    "description": "The emoji unicode represnetation",
+                    "examples": [
+                      "🐛",
+                      "✨"
+                    ]
+                  },
+                  "shortcode": {
+                    "type": "string",
+                    "description": "The emoji shortcode represnetation",
+                    "examples": [
+                      ":bug:",
+                      ":sparkles:"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
         "commitji.jira.allowIssueKeyPrompt": {
           "type": "boolean",
           "default": false,

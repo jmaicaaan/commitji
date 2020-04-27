@@ -3,7 +3,7 @@ import { formatter, basicCommitParser, Settings } from '@commitji/core';
 import { showCommitTypePicker, showCommitBodyInputBox, writeCommitToTerminal } from '../utils';
 
 export const basicWorkflow = async (settings: Settings) => {
-  const commitType = await showCommitTypePicker();
+  const commitType = await showCommitTypePicker(settings);
   const commitMessage = await showCommitBodyInputBox();
   const parser = basicCommitParser({
     format: settings.format,
