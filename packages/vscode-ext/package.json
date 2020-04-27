@@ -2,7 +2,7 @@
   "name": "commitji-vs",
   "displayName": "Commitji",
   "description": "Create conventional commits with gitmojis",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.44.0"
   },
@@ -154,20 +154,20 @@
     "vscode:publish": "vsce publish"
   },
   "devDependencies": {
-    "@types/vscode": "^1.44.0",
     "@types/glob": "^7.1.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
-    "eslint": "^6.8.0",
-    "@typescript-eslint/parser": "^2.26.0",
+    "@types/vscode": "^1.44.0",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
     "glob": "^7.1.6",
     "mocha": "^7.1.1",
     "typescript": "^3.8.3",
     "vscode-test": "^1.3.0"
   },
   "dependencies": {
-    "@commitji/core": "^1.0.8",
+    "@commitji/core": "^1.0.9",
     "vsce": "^1.75.0"
   }
 }
