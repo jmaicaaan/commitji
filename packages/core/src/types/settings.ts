@@ -6,7 +6,7 @@ export type JiraWorkflowTransition = Record<'key' | 'label' | 'workflowTransitio
 export type Settings = {
   workflow: App.BasicWorkflow | App.JiraWorkflow;
   format?: string;
-  commitTypes?: CommitType[],
+  commitTypes: CommitType[],
   jira: {
     allowWorkflowTransitionPrompt: false;
     workflowTransitions: JiraWorkflowTransition[];
