@@ -104,12 +104,6 @@
             }
           }
         },
-        "commitji.jira.allowIssueKeyPrompt": {
-          "type": "boolean",
-          "default": false,
-          "description": "Toggle to enable asking Jira Ticket when commiting",
-          "scope": "application"
-        },
         "commitji.jira.allowWorkflowTransitionPrompt": {
           "type": "boolean",
           "default": false,

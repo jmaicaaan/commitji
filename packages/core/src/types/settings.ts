@@ -8,7 +8,6 @@ export type Settings = {
   format?: string;
   commitTypes?: CommitType[],
   jira: {
-    allowIssueKeyPrompt: false;
     allowWorkflowTransitionPrompt: false;
     workflowTransitions: JiraWorkflowTransition[];
   };
