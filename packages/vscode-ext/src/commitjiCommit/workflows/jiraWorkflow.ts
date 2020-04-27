@@ -9,7 +9,7 @@ import {
 } from '../utils';
 
 export const jiraWorkflow = async (settings: Settings) => {
-  const commitType = await showCommitTypePicker();
+  const commitType = await showCommitTypePicker(settings);
   const issueKey = await showJiraIssueKeyInputBox();
   const commitMessage = await showCommitBodyInputBox();
   const workflowTransition = await showJiraWorkflowTransitionPicker(
