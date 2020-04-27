@@ -1,5 +1,5 @@
 # Welcome to @commitji/core 👋
-[![npm version](https://badge.fury.io/js/commitji.svg)](https://badge.fury.io/js/commitji)
+[![npm version](https://badge.fury.io/js/%40commitji%2Fcore.svg)](https://badge.fury.io/js/%40commitji%2Fcore)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
 > Create conventional commits with gitmojis
