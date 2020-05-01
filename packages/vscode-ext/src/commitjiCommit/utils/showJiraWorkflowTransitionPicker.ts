@@ -2,19 +2,25 @@ import { QuickPickItem, window } from 'vscode';
 
 import { JiraWorkflowTransition, Message } from '@commitji/core';
 import { alerter } from './alerter';
+import { Settings } from '../types';
 
 const findWorkflowTransitionByName = (name: string) => (workflowTransition: JiraWorkflowTransition) => workflowTransition.workflowTransitionName === name;
+const workflowTransitionToQuickPickDisplay = (
+  workflowTransition: JiraWorkflowTransition
+): QuickPickItem => ({
+  label: [workflowTransition.label, `(${workflowTransition.workflowTransitionName})`].join(' '),
+});
 
 export const showJiraWorkflowTransitionPicker = async (
-  workflowTransitions: JiraWorkflowTransition[]
+  settings: Settings
 ): Promise<JiraWorkflowTransition | undefined> => {
-  const workflowTransitionToQuickPickDisplay = (
-    workflowTransition: JiraWorkflowTransition
-  ): QuickPickItem => ({
-    label: [workflowTransition.label, `(${workflowTransition.workflowTransitionName})`].join(' '),
-  });
-
+  const shouldPrompt = settings.jira.allowWorkflowTransitionPrompt;
+  const workflowTransitions = settings.jira.workflowTransitions;
   const quickPickItems = workflowTransitions.map(workflowTransitionToQuickPickDisplay);
+
+  if (!shouldPrompt) {
+    return;
+  }
 
   const result = await window.showQuickPick(quickPickItems, {
     placeHolder: 'What type of task did you do?',

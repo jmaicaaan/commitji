@@ -13,9 +13,7 @@ export const jiraWorkflow = async (settings: Settings) => {
   const commitType = await showCommitTypePicker(settings);
   const issueKey = await showJiraIssueKeyInputBox();
   const commitMessage = await showCommitBodyInputBox();
-  const workflowTransition = await showJiraWorkflowTransitionPicker(
-    settings.jira.workflowTransitions
-  );
+  const workflowTransition = await showJiraWorkflowTransitionPicker(settings);
   const parser = jiraCommitParser({
     format: settings.format,
     includeWorkflow: settings.jira.allowWorkflowTransitionPrompt
