@@ -1,4 +1,4 @@
-import { formatter, jiraCommitParser, Settings } from '@commitji/core';
+import { formatter, jiraCommitParser } from '@commitji/core';
 
 import {
   showCommitTypePicker,
@@ -7,6 +7,7 @@ import {
   showJiraWorkflowTransitionPicker,
   writeCommitToTerminal,
 } from '../utils';
+import { Settings } from '../types';
 
 export const jiraWorkflow = async (settings: Settings) => {
   const commitType = await showCommitTypePicker(settings);
@@ -28,5 +29,5 @@ export const jiraWorkflow = async (settings: Settings) => {
     workflowTransition,
   });
 
-  writeCommitToTerminal(formattedCommitText);
+  writeCommitToTerminal(formattedCommitText, settings.autoCommit);
 };

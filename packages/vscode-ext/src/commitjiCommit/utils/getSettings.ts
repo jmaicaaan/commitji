@@ -1,6 +1,8 @@
 import { workspace } from 'vscode';
 
-import { App, Settings } from '@commitji/core';
+import { App } from '@commitji/core';
+
+import { Settings } from '../types';
 
 const clean = (settings: Settings): Settings => ({
   ...settings,

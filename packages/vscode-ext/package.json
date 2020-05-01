@@ -104,6 +104,11 @@
             }
           }
         },
+        "commitji.autoCommit": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically commit instead of manually commiting"
+        },
         "commitji.jira.allowWorkflowTransitionPrompt": {
           "type": "boolean",
           "default": false,
