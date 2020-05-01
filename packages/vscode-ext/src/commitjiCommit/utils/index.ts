@@ -7,3 +7,4 @@ export * from './showJiraWorkflowTransitionPicker';
 export * from './writeCommitToTerminal';
 export * from './git';
 export * from './pipe';
+export * from './getJiraIssueKeyOrShowPrompt';
