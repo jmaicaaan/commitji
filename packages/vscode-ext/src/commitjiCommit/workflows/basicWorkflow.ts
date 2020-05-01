@@ -1,6 +1,7 @@
-import { formatter, basicCommitParser, Settings } from '@commitji/core';
+import { formatter, basicCommitParser } from '@commitji/core';
 
 import { showCommitTypePicker, showCommitBodyInputBox, writeCommitToTerminal } from '../utils';
+import { Settings } from '../types';
 
 export const basicWorkflow = async (settings: Settings) => {
   const commitType = await showCommitTypePicker(settings);
@@ -15,5 +16,5 @@ export const basicWorkflow = async (settings: Settings) => {
     commitMessage,
   });
 
-  writeCommitToTerminal(formattedCommitText);
+  writeCommitToTerminal(formattedCommitText, settings.autoCommit);
 };

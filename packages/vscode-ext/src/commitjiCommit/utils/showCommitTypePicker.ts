@@ -1,6 +1,7 @@
 import { QuickPickItem, window } from 'vscode';
 
-import { commitTypes, CommitType, Message, Settings } from '@commitji/core';
+import { commitTypes, CommitType, Message } from '@commitji/core';
+import { Settings } from '../types';
 
 type ShowCommitTypePickerResult = CommitType;
 
