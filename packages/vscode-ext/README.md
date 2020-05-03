@@ -52,7 +52,11 @@ Commitji adds extra settings on customizing your Jira Workflow
     For more details about the `workflowTransitionName` check out this [Jira documentation](https://confluence.atlassian.com/bitbucket/use-smart-commits-298979931.html).
 
   - Customized extraction pattern on getting your Jira Issue Key on your current branch
-    - By default, it uses the format of `[A-Z]{2,5}-[0-9]{1,5}` on picking your Jira Issue Key through your current branch. You can change this if you think this doesn't match your current Git branching strategy.
+    - By default, it uses the format of `((?<!([A-Z]{2,10})-?)[A-Z]+-\d+)` on picking your Jira Issue Key through your current branch. You can change this if you think this doesn't match your current Git branching strategy. This is based from the Jira as it is said [here](https://stackoverflow.com/questions/19322669/regular-expression-for-a-jira-identifier/30518972#30518972).
+
+    ```
+    "commitji.jira.issueKeyExtractionPattern": "((?<!([A-Z]{2,10})-?)[A-Z]+-\\d+)"
+    ```
 
 #### Commit Formatting
 
@@ -69,6 +73,10 @@ By default, Commitji includes its preferred commit format
     - Jira
       - Issue Key: `{{issueKey}}`
       - Workflow Transition Name: `{{workflowTransitionName}}`
+
+#### Auto Commmit
+
+Commitji allows you to configure if you want it to auto-commit your Git commit without you manually executing the command. By default, it is on `false`.
 
 ## Author
 
