@@ -5,6 +5,16 @@
 
 ### 🏠 [Homepage](https://github.com/jmaicaaan/commitji)
 
+## Demo
+
+- Basic Workflow
+
+![commitji-basic-workflow](https://user-images.githubusercontent.com/13105222/80914129-31d93100-8d7c-11ea-93b4-216d3f4afda3.gif)
+
+- Jira Workflow
+
+![commitji-jira-workflow](https://user-images.githubusercontent.com/13105222/80914128-2ede4080-8d7c-11ea-85e8-043763d37fbb.gif)
+
 ## Usages
 
 ### Creating a conventional commit
