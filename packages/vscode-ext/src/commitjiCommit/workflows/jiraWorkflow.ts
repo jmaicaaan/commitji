@@ -1,17 +1,20 @@
-import { formatter, jiraCommitParser } from '@commitji/core';
+import {
+  formatter,
+  jiraCommitParser,
+} from '@commitji/core';
 
 import {
   showCommitTypePicker,
-  showJiraIssueKeyInputBox,
   showCommitBodyInputBox,
   showJiraWorkflowTransitionPicker,
   writeCommitToTerminal,
+  getJiraIssueKeyOrShowPrompt,
 } from '../utils';
 import { Settings } from '../types';
 
 export const jiraWorkflow = async (settings: Settings) => {
   const commitType = await showCommitTypePicker(settings);
-  const issueKey = await showJiraIssueKeyInputBox();
+  const issueKey = await getJiraIssueKeyOrShowPrompt(settings);
   const commitMessage = await showCommitBodyInputBox();
   const workflowTransition = await showJiraWorkflowTransitionPicker(settings);
   const parser = jiraCommitParser({
