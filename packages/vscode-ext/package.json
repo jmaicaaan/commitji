@@ -111,7 +111,7 @@
         },
         "commitji.jira.issueKeyExtractionPattern": {
           "type": "string",
-          "default": "[A-Z]{2,5}-[0-9]{1,5}",
+          "default": "((?<!([A-Z]{2,10})-?)[A-Z]+-\\d+)",
           "description": "Set the extraction pattern when getting the Jira Issue Key from the current Git branch"
         },
         "commitji.jira.allowWorkflowTransitionPrompt": {
