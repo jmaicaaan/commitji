@@ -1,4 +1,4 @@
-export const pickJiraIssueKeyFromString = (pickPattern: string = '[A-Z]{2,5}-[0-9]{1,5}') => (
+export const pickJiraIssueKeyFromString = (pickPattern: string) => (
   value: string = ''
 ) => {
   const matchedString = value.match(pickPattern) || [];
