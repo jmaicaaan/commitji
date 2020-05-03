@@ -8,7 +8,7 @@ import { Settings } from '../types';
 export const getJiraIssueKeyOrShowPrompt = (settings: Settings) => {
   const jiraIssueKeyFromGitBranch = pipe(
     git.getBranchName,
-    pickJiraIssueKeyFromString(settings.issueKeyExtractionPattern),
+    pickJiraIssueKeyFromString(settings.jira.issueKeyExtractionPattern),
   )();
 
   if (jiraIssueKeyFromGitBranch) {
