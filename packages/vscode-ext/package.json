@@ -2,7 +2,7 @@
   "name": "commitji-vs",
   "displayName": "Commitji",
   "description": "Create conventional commits with gitmojis",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "engines": {
     "vscode": "^1.44.0"
   },
@@ -177,7 +177,7 @@
     "vscode-test": "^1.3.0"
   },
   "dependencies": {
-    "@commitji/core": "^1.0.11",
+    "@commitji/core": "^1.0.12",
     "vsce": "^1.75.0"
   }
 }

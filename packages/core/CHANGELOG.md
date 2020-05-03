@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/jmaicaaan/commitji/compare/@commitji/core@1.0.11...@commitji/core@1.0.12) (2020-05-03)
+
+**Note:** Version bump only for package @commitji/core
+
+
+
+
+
 ## [1.0.11](https://github.com/jmaicaaan/commitji/compare/@commitji/core@1.0.10...@commitji/core@1.0.11) (2020-04-27)
 
 **Note:** Version bump only for package @commitji/core
