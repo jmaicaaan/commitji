@@ -15,10 +15,25 @@
 
 ### Configuring Commitji
 
-- Workflow selection
-  - Commitji includes two workflow as of the moment (Basic Workflow and Jira Workflow). You can change this on the settings. 
-  - Basic Workflow will ask you what commit type and commit message you want to include.
-  - Jira Workflow will ask you commit type, Jira Issue Key/Number, Commit Message and Jira Workflow Transition (optional).
+#### Workflow selection
+
+Commitji includes two workflow as of the moment (Basic Workflow and Jira Workflow). You can change this on the settings.
+   
+  - Basic Workflow will ask you on the following questins:
+    - What is the commit type? (ex: feat, fix, style)
+    - What is the commit message?
+
+  - Jira Workflow will ask you on the following questions: 
+    - What is the commit type? (ex: feat, fix, style)
+    - What is the Jira Issue Key/Number (if no issue key can be found on your current branch/repo; otherwise, it won't ask you about it)
+    - What is the commit message?
+    - What is the Jira Workflow Transition (optional)
+
+#### Jira Workflow Configuration
+  
+Commitji adds extra settings on customizing your Jira Workflow
+
+  - Optional prompt of Jira Workflow Transition
     - If you wish to enable the Jira Workflow Transition, toggle the option `Allow Workflow Transition prompt` and you must provide an array of workflow transitions in the settings. 
     ```
     "commitji.jira.workflowTransitions": [
@@ -35,10 +50,18 @@
     ]
     ```
     For more details about the `workflowTransitionName` check out this [Jira documentation](https://confluence.atlassian.com/bitbucket/use-smart-commits-298979931.html).
-- Commit Formatting
-  - By default, Commitji includes its preferred commit format
-    - Basic Workflow Commit Format: `{{unicode}} - {{commitType}}: {{commitMessage}}`
-    - Jira Workflow Commit Format: `{{unicode}} - {{commitType}}: {{issueKey}} {{commitMessage}} {{workflowTransitionName}}`
+
+  - Customized extraction pattern on getting your Jira Issue Key on your current branch
+    - By default, it uses the format of `[A-Z]{2,5}-[0-9]{1,5}` on picking your Jira Issue Key through your current branch. You can change this if you think this doesn't match your current Git branching strategy.
+
+#### Commit Formatting
+
+By default, Commitji includes its preferred commit format
+
+  - Basic Workflow Commit Format: `{{unicode}} {{commitType}}: {{commitMessage}}`
+
+  - Jira Workflow Commit Format: `{{unicode}} {{commitType}}: {{issueKey}} {{commitMessage}} {{workflowTransitionName}}`
+
   - If you wish to modify this, you can change the format on the settings as well. Here are the corresponding key bindings:
     - Unicode: `{{unicode}}` - This one is for the emoji
     - Commit Type: `{{commitType}}`
