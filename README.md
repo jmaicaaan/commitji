@@ -12,7 +12,7 @@
 
 ## Author
 
-👤 **JM Santos <johmichaelubas.santos@gmail.com.com**
+👤 **JM Santos** <johmichaelubas.santos@gmail.com>
 
 * Website: https://github.com/jmaicaaan
 * Github: [@jmaicaaan](https://github.com/jmaicaaan)
@@ -21,7 +21,7 @@
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page](https://github.com/jmaicaaan/system-media/issues). 
+Feel free to check [issues page](https://github.com/jmaicaaan/system-media/issues).
 
 ## Show your support
 
