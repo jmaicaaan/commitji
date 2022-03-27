@@ -28,23 +28,23 @@
 #### Workflow selection
 
 Commitji includes two workflow as of the moment (Basic Workflow and Jira Workflow). You can change this on the settings.
-   
+
   - Basic Workflow will ask you on the following questins:
     - What is the commit type? (ex: feat, fix, style)
     - What is the commit message?
 
-  - Jira Workflow will ask you on the following questions: 
+  - Jira Workflow will ask you on the following questions:
     - What is the commit type? (ex: feat, fix, style)
     - What is the Jira Issue Key/Number (if no issue key can be found on your current branch/repo; otherwise, it won't ask you about it)
     - What is the commit message?
     - What is the Jira Workflow Transition (optional)
 
 #### Jira Workflow Configuration
-  
+
 Commitji adds extra settings on customizing your Jira Workflow
 
   - Optional prompt of Jira Workflow Transition
-    - If you wish to enable the Jira Workflow Transition, toggle the option `Allow Workflow Transition prompt` and you must provide an array of workflow transitions in the settings. 
+    - If you wish to enable the Jira Workflow Transition, toggle the option `Allow Workflow Transition prompt` and you must provide an array of workflow transitions in the settings.
     ```
     "commitji.jira.workflowTransitions": [
         {
@@ -90,7 +90,7 @@ Commitji allows you to configure if you want it to auto-commit your Git commit w
 
 ## Author
 
-👤 **JM Santos <johmichaelubas.santos@gmail.com.com**
+👤 **JM Santos** <johmichaelubas.santos@gmail.com>
 
 * Website: https://github.com/jmaicaaan
 * Github: [@jmaicaaan](https://github.com/jmaicaaan)
@@ -99,7 +99,7 @@ Commitji allows you to configure if you want it to auto-commit your Git commit w
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page](https://github.com/jmaicaaan/system-media/issues). 
+Feel free to check [issues page](https://github.com/jmaicaaan/system-media/issues).
 
 ## Show your support
 
