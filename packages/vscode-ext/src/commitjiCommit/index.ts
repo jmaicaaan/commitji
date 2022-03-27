@@ -3,11 +3,11 @@ import { alerter } from './utils/alerter';
 
 export const commitjiCommit = async () => {
   const settings = getSettings();
-  const runWorkflow = getWorkflow(settings.workflow);
+  const runWorkflowFn = getWorkflow(settings.workflow);
 
   try {
-    await runWorkflow(settings);
+    await runWorkflowFn(settings);
   } catch (error) {
-    alerter.error(error.message);
+    alerter.error((error as { message: string }).message);
   }
 };
