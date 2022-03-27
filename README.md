@@ -6,9 +6,13 @@
 
 ### 🏠 [Homepage](https://github.com/jmaicaaan/commitji)
 
+## Installations
+
+- Visit [VSCode marketplace](https://marketplace.visualstudio.com/items?itemName=jmaicaaan.commitji-vs)
+
 ## Usages
 
-- Check out this one for [VScode extension usage](https://github.com/jmaicaaan/commitji/tree/master/packages/vscode-ext)
+- Check out this one for [VSCode extension usage](https://github.com/jmaicaaan/commitji/tree/master/packages/vscode-ext)
 
 ## Author
 
