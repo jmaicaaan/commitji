@@ -39,7 +39,7 @@
             "basic",
             "jira"
           ],
-          "scope": "application",
+          "scope": "resource",
           "enumDescriptions": [
             "Use the basic workflow",
             "Use the jira workflow that enables you to do smart commits"
@@ -47,11 +47,12 @@
         },
         "commitji.format": {
           "type": "string",
+          "default": "{{unicode}} - {{commitType}}: {{commitMessage}}",
           "examples": [
             "{{unicode}} - {{commitType}}: {{commitMessage}}"
           ],
           "description": "Set the commit format you wanted to use",
-          "scope": "application"
+          "scope": "resource"
         },
         "commitji.commitTypes": {
           "type": "array",
@@ -118,7 +119,7 @@
           "type": "boolean",
           "default": false,
           "description": "Toggle to enable asking Jira Transition Workflow when commiting",
-          "scope": "application"
+          "scope": "resource"
         },
         "commitji.jira.workflowTransitions": {
           "type": "array",

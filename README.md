@@ -21,7 +21,7 @@
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page](https://github.com/jmaicaaan/system-media/issues).
+Feel free to check [issues page](https://github.com/jmaicaaan/commitji/issues).
 
 ## Show your support
 
