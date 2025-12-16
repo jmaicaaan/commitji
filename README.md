@@ -16,7 +16,7 @@
 
 ## Author
 
-👤 **JM Santos** <johmichaelubas.santos@gmail.com>
+👤 **JM Santos** 
 
 * Website: https://github.com/jmaicaaan
 * Github: [@jmaicaaan](https://github.com/jmaicaaan)
